@@ -1,0 +1,92 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.9/dist-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.9/dist-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/local/lib/python3.9/dist-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.9/dist-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.9/dist-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.9/dist-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+data_base = connect(
+  host='localhost',
+  user='root',
+  password=''
+)
+
+cur = data_base.cursor()
+
+query = 'show databases'
+
+cur.execute(query)
+
+data_bases = cur.fetchall()
+
+for data in data_bases:
+  print(data)
+
+
+# mycursor.execute("SELECT * FROM petallength")
+
+# myresult = mycursor.fetchall()
+
+# for x in myresult:
+#   print(x)
+
+------------------
+
+[0;31m[0m
+[0;31mOSError[0mTraceback (most recent call last)
+[0;32m/usr/local/lib/python3.9/dist-packages/pymysql/connections.py[0m in [0;36mconnect[0;34m(self, sock)[0m
+[1;32m    612[0m                         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 613[0;31m                             sock = socket.create_connection(
+[0m[1;32m    614[0m                                 [0;34m([0m[0mself[0m[0;34m.[0m[0mhost[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0mport[0m[0;34m)[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0mconnect_timeout[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3.9/socket.py[0m in [0;36mcreate_connection[0;34m(address, timeout, source_address)[0m
+[1;32m    843[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 844[0;31m             [0;32mraise[0m [0merr[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    845[0m         [0;32mfinally[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3.9/socket.py[0m in [0;36mcreate_connection[0;34m(address, timeout, source_address)[0m
+[1;32m    831[0m                 [0msock[0m[0;34m.[0m[0mbind[0m[0;34m([0m[0msource_address[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 832[0;31m             [0msock[0m[0;34m.[0m[0mconnect[0m[0;34m([0m[0msa[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    833[0m             [0;31m# Break explicitly a reference cycle[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mOSError[0m: [Errno 99] Cannot assign requested address
+
+During handling of the above exception, another exception occurred:
+
+[0;31mOperationalError[0mTraceback (most recent call last)
+[0;32m<ipython-input-3-2d4ec58ccd00>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m data_base = connect(
+[0m[1;32m      2[0m   [0mhost[0m[0;34m=[0m[0;34m'localhost'[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m   [0muser[0m[0;34m=[0m[0;34m'root'[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m   [0mpassword[0m[0;34m=[0m[0;34m''[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m )
+
+[0;32m/usr/local/lib/python3.9/dist-packages/pymysql/connections.py[0m in [0;36m__init__[0;34m(self, user, password, host, database, unix_socket, port, charset, sql_mode, read_default_file, conv, use_unicode, client_flag, cursorclass, init_command, connect_timeout, read_default_group, autocommit, local_infile, max_allowed_packet, defer_connect, auth_plugin_map, read_timeout, write_timeout, bind_address, binary_prefix, program_name, server_public_key, ssl, ssl_ca, ssl_cert, ssl_disabled, ssl_key, ssl_verify_cert, ssl_verify_identity, compress, named_pipe, passwd, db)[0m
+[1;32m    351[0m             [0mself[0m[0;34m.[0m[0m_sock[0m [0;34m=[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    352[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 353[0;31m             [0mself[0m[0;34m.[0m[0mconnect[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    354[0m [0;34m[0m[0m
+[1;32m    355[0m     [0;32mdef[0m [0m__enter__[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.9/dist-packages/pymysql/connections.py[0m in [0;36mconnect[0;34m(self, sock)[0m
+[1;32m    662[0m                 [0;32mif[0m [0mDEBUG[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    663[0m                     [0mprint[0m[0;34m([0m[0mexc[0m[0;34m.[0m[0mtraceback[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 664[0;31m                 [0;32mraise[0m [0mexc[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    665[0m [0;34m[0m[0m
+[1;32m    666[0m             [0;31m# If e is neither DatabaseError or IOError, It's a bug.[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mOperationalError[0m: (2003, "Can't connect to MySQL server on 'localhost' ([Errno 99] Cannot assign requested address)")
+OperationalError: (2003, "Can't connect to MySQL server on 'localhost' ([Errno 99] Cannot assign requested address)")
+
