@@ -17,27 +17,15 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-#pip install mysql-connector
-import mysql.connector
-import pandas as pd
+from sklearn.decomposition import PCA import numpy as np
+
+
 ------------------
 
-[0;31m[0m
-[0;31mModuleNotFoundError[0mTraceback (most recent call last)
-[0;32m<ipython-input-1-5a6e20a3dd8f>[0m in [0;36m<cell line: 2>[0;34m()[0m
-[1;32m      1[0m [0;31m#pip install mysql-connector[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 2[0;31m [0;32mimport[0m [0mmysql[0m[0;34m.[0m[0mconnector[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      3[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m
+[0;36m  File [0;32m"<ipython-input-1-ee3cae98fe23>"[0;36m, line [0;32m1[0m
+[0;31m    from sklearn.decomposition import PCA import numpy as np[0m
+[0m                                          ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
 
-[0;31mModuleNotFoundError[0m: No module named 'mysql'
-
-[0;31m---------------------------------------------------------------------------[0;32m
-NOTE: If your import is failing due to a missing package, you can
-manually install dependencies using either !pip or !apt.
-
-To view examples of installing some common dependencies, click the
-"Open Examples" button below.
-[0;31m---------------------------------------------------------------------------[0m
-
-ModuleNotFoundError: No module named 'mysql'
+SyntaxError: invalid syntax (<ipython-input-1-ee3cae98fe23>, line 1)
 
