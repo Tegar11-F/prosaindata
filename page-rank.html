@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'page-rank';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <link rel="next" title="scrappingComentYoutube" href="scrappingComentYoutube.html" />
     <link rel="prev" title="Graph" href="graph-networkx.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,6 +183,12 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="graph-networkx.html">Graph</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">PageRank</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="scrappingComentYoutube.html">scrappingComentYoutube</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Modeling%28LSA%29.html">Tugas 5 Modeling LSA</a></li>
 
 
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
@@ -422,7 +428,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/8df97cde66e021694bdd345ca407fa3a7b892f79da80d1d58e1982e46800fb83.png" src="_images/8df97cde66e021694bdd345ca407fa3a7b892f79da80d1d58e1982e46800fb83.png" />
+<img alt="_images/5c03d5ed27e41be5d9ee179d2cc5826cd1da669226b42022ba0df2a548d47b4a.png" src="_images/5c03d5ed27e41be5d9ee179d2cc5826cd1da669226b42022ba0df2a548d47b4a.png" />
 </div>
 </div>
 <p>menghitung manual PageRank dari Graph di atas</p>
@@ -472,8 +478,8 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/232.6 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━ <span class=" -Color -Color-Green">225.3/232.6 kB</span> <span class=" -Color -Color-Red">6.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">232.6/232.6 kB</span> <span class=" -Color -Color-Red">5.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━ <span class=" -Color -Color-Green">225.3/232.6 kB</span> <span class=" -Color -Color-Red">8.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">232.6/232.6 kB</span> <span class=" -Color -Color-Red">6.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
@@ -627,18 +633,18 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2023-04-19 06:13:40--  https://raw.githubusercontent.com/Tegar11-F/Data-Set/main/berita.txt
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.110.133, 185.199.111.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2023-05-10 10:51:13--  https://raw.githubusercontent.com/Tegar11-F/Data-Set/main/berita.txt
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 686 [text/plain]
-Saving to: ‘berita.txt’
+Saving to: ‘berita.txt.1’
 
 
-berita.txt            0%[                    ]       0  --.-KB/s               
-berita.txt          100%[===================&gt;]     686  --.-KB/s    in 0s      
+berita.txt.1          0%[                    ]       0  --.-KB/s               
+berita.txt.1        100%[===================&gt;]     686  --.-KB/s    in 0s      
 
-2023-04-19 06:13:40 (20.0 MB/s) - ‘berita.txt’ saved [686/686]
+2023-05-10 10:51:13 (8.60 MB/s) - ‘berita.txt.1’ saved [686/686]
 </pre></div>
 </div>
 </div>
@@ -666,20 +672,19 @@ berita.txt          100%[===================&gt;]     686  --.-KB/s    in 0s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2023-04-19 06:13:40--  https://raw.githubusercontent.com/Tegar11-F/Data-Set/main/jurnal.pdf
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.109.133, 185.199.110.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2023-05-10 10:51:13--  https://raw.githubusercontent.com/Tegar11-F/Data-Set/main/jurnal.pdf
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 605729 (592K) [application/octet-stream]
-Saving to: ‘jurnal.pdf’
+Saving to: ‘jurnal.pdf.1’
 
 
-jurnal.pdf            0%[                    ]       0  --.-KB/s               
+jurnal.pdf.1          0%[                    ]       0  --.-KB/s               
+jurnal.pdf.1        100%[===================&gt;] 591.53K  --.-KB/s    in 0.04s   
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>jurnal.pdf          100%[===================&gt;] 591.53K  --.-KB/s    in 0.04s   
-
-2023-04-19 06:13:40 (13.1 MB/s) - ‘jurnal.pdf’ saved [605729/605729]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-05-10 10:51:14 (12.9 MB/s) - ‘jurnal.pdf.1’ saved [605729/605729]
 </pre></div>
 </div>
 </div>
@@ -748,11 +753,11 @@ jurnal.pdf            0%[                    ]       0  --.-KB/s
       </div>
     </a>
     <a class="right-next"
-       href="markdown-notebooks.html"
+       href="scrappingComentYoutube.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+        <p class="prev-next-title">scrappingComentYoutube</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
